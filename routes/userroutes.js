@@ -5,14 +5,16 @@ const {
   getUsers,
   getUser,
   createUser,
-  updateUser,
-  deleteUser,
 } = require("../controllers/user.controller.js");
 
-// post data request
+// get all users
+router.get("/", getUsers);
+
+// create acc
 router.post("/signup", createUser);
 
+// login acc
 router.get("/login", getUser);
 
-
 module.exports = router;
+ 
